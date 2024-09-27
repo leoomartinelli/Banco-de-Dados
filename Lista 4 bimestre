@@ -1,0 +1,26 @@
+1)
+import hashlib
+
+nome = input("Digite seu Nome: ")
+senha = input("Digite sua senha: ")
+hash_objeto = hashlib.sha256(senha.encode())
+
+
+hash_hexadecimal = hash_objeto.hexdigest()
+
+print(hash_hexadecimal)
+2)
+import hashlib
+
+nome = input("Digite seu Nome: ")
+senha = input("Digite sua senha: ")
+hash_objeto = hashlib.sha256(senha.encode())
+
+
+hash_hexadecimal = hash_objeto.hexdigest()
+senha_usuario = 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3'
+
+if hash_hexadecimal == senha_usuario:
+    print(f"Bom dia {nome}")
+else:
+    print("Senha Incorreta")    
